@@ -1,16 +1,18 @@
+// @import url('https://fonts.googleapis.com/css?family=Signika:400,700');
 // @import '../scripts/vendor/nucleo/css/nucleo';
 @import './argon';
 // @import '../scripts/vendor/nucleo/css/nucleo-svg';
-
-// .section {
-//   background-image: linear-gradient(
-//     to right,
-//     #f78ca0 0%,
-//     #f9748f 19%,
-//     #fd868c 60%,
-//     #fe9a8b 100%
-//   );
+// body {
+//   font-family: 'Signika', sans-serif;
 // }
 .display-5 {
   font-size: 3.5rem;
+}
+.section {
+  background: rgb(196, 88, 115);
+  background: linear-gradient(
+    194deg,
+    rgba(196, 88, 115, 1) 0%,
+    rgba(252, 153, 108, 1) 100%
+  );
 }

@@ -12310,3 +12310,7 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle {
 
 .display-5 {
   font-size: 3.5rem; }
+
+.section {
+  background: #c45873;
+  background: linear-gradient(194deg, #c45873 0%, #fc996c 100%); }
