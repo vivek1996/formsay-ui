@@ -22,6 +22,7 @@
     "cssnano": "^4.1.4",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-bundle-assets": "^2.29.0",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^1.1.1",
     "gulp-sass": "^4.0.1",

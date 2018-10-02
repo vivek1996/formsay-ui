@@ -8,6 +8,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const runSequence = require('run-sequence');
+const bundle = require('gulp-bundle-assets');
 
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -62,10 +63,18 @@ gulp.task('Bcss', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('bundle', function() {
+  return gulp
+    .src('./bundle.config.js')
+    .pipe(bundle())
+    .pipe(bundle.results('./'))
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('default', function(callback) {
   runSequence(['sass', 'browser-sync', 'watch'], callback);
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['Bcss'], callback);
+  runSequence('clean:dist', ['Bcss', 'bundle'], callback);
 });
