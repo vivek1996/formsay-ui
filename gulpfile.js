@@ -20,7 +20,7 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
   return (
     gulp
-      .src('src/styles/**/*.scss')
+      .src('src/styles/main.scss')
       .pipe(sass().on('error', sass.logError))
       // .pipe(
       //   autoprefixer({
@@ -43,18 +43,19 @@ gulp.task('clean:dist', function() {
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
-  gulp.watch('src/styles/**/*.scss', ['sass']);
+  gulp.watch('src/styles/main.scss', ['sass']);
   gulp.watch('src/*.html', browserSync.reload);
-  gulp.watch('src/scripts/**/*.js', browserSync.reload);
+  gulp.watch('src/scripts/*.js', browserSync.reload);
 });
 
 gulp.task('Bcss', function() {
   var plugins = [autoprefixer({ browsers: ['last 4 versions'] }), cssnano()];
   return gulp
-    .src('./src/styles/css/*.css')
+    .src('./src/styles/main.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(
       purgecss({
-        content: ['src/**/*.html'],
+        content: ['src/*.html'],
       }),
     )
     .pipe(postcss(plugins))
