@@ -1,0 +1,19 @@
+{
+  "name": "formsay-ui",
+  "version": "1.0.0",
+  "description": "UI for Formsay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivek1996/formsay-ui.git"
+  },
+  "author": "vivek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivek1996/formsay-ui/issues"
+  },
+  "homepage": "https://github.com/vivek1996/formsay-ui#readme"
+}
