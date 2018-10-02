@@ -76,5 +76,5 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist', ['Bcss', 'bundle'], callback);
+  runSequence('clean:dist', ['Bcss'], callback);
 });
