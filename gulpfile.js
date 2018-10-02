@@ -4,9 +4,10 @@ const browserSync = require('browser-sync').create();
 // const uglify = require('gulp-uglify');
 const del = require('del');
 const purgecss = require('gulp-purgecss');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const runSequence = require('run-sequence');
 
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -48,15 +49,14 @@ gulp.task('watch', ['browser-sync', 'sass'], function() {
 });
 
 gulp.task('Bcss', function() {
-  var plugins = [
-    purgecss({
-      content: ['src/**/*.html'],
-    }),
-    autoprefixer({ browsers: ['last 4 versions'] }),
-    cssnano(),
-  ];
+  var plugins = [autoprefixer({ browsers: ['last 4 versions'] }), cssnano()];
   return gulp
-    .src('./src/*.css')
+    .src('./src/styles/css/*.css')
+    .pipe(
+      purgecss({
+        content: ['src/**/*.html'],
+      }),
+    )
     .pipe(postcss(plugins))
     .pipe(gulp.dest('./dist'));
 });
