@@ -12311,6 +12311,21 @@ html:not([dir='rtl']) .noUi-horizontal .noUi-handle {
 .display-5 {
   font-size: 3.5rem; }
 
-.section {
+.section.section-col {
   background: #c45873;
   background: linear-gradient(194deg, #c45873 0%, #fc996c 100%); }
+
+.my-text {
+  color: #a5355c; }
+
+.mt--50 {
+  margin-top: -50px; }
+
+.headroom--not-top {
+  background-color: #4f5152 !important; }
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #3d54d300;
+  border-bottom: 4px solid #a5355c; }

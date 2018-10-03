@@ -8,11 +8,27 @@
 .display-5 {
   font-size: 3.5rem;
 }
-.section {
+.section.section-col {
   background: rgb(196, 88, 115);
   background: linear-gradient(
     194deg,
     rgba(196, 88, 115, 1) 0%,
     rgba(252, 153, 108, 1) 100%
   );
+}
+.my-text {
+  color: rgb(165, 53, 92);
+}
+.mt--50 {
+  margin-top: -50px;
+}
+.headroom--not-top {
+  background-color: #4f5152 !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #3d54d300;
+  border-bottom: 4px solid rgb(165, 53, 92);
 }
